@@ -7,3 +7,4 @@ RUN apt-get install fonts-lmodern
 RUN npm set -g unsafe-perm
 RUN npm install -g full-icu
 RUN npm set -g unsafe-perm false
+RUN npm install aws-lambda-ric
