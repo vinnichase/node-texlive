@@ -1,7 +1,7 @@
-FROM amazon/aws-lambda-nodejs:12
-
 # Define custom function directory
 ARG FUNCTION_DIR="/function"
+
+FROM amazon/aws-lambda-nodejs:12
 
 FROM node:12-buster as build-image
 
@@ -29,7 +29,7 @@ WORKDIR ${FUNCTION_DIR}
 RUN npm install
 
 # Grab a fresh slim copy of the image to reduce the final size
-FROM node:12-buster-slim
+FROM node:18
 
 RUN apt-get update
 RUN apt-get -qq -y --no-install-recommends install texlive texlive-xetex texlive-lang-german texlive-latex-extra
