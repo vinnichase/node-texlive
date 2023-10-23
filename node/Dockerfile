@@ -1,4 +1,4 @@
-FROM node:lts-slim
+FROM --platform=linux/amd64 node:lts-slim
 
 RUN apt-get update
 RUN apt-get -qq -y --no-install-recommends install texlive texlive-xetex texlive-lang-german texlive-latex-extra

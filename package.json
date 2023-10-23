@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "docker:build": "docker buildx build -t vinnichase/node-texlive ./node",
+        "docker:push": "docker push vinnichase/node-texlive"
+    }
+}
